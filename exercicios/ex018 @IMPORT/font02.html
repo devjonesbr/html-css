@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        @font-face {
+            font-family: 'Love';
+            src: url('fonts/Valentine.otf') format('opentype'), url('fonts/Valentine.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'eg';
+            src: url('fonts/AncientEgyptianHieroglyphs.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'circus';
+            src: url('fonts/LosChapters.otf'), format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /*
+        Tipos de format()
+        - opentype (otf)
+        - truetype (ttf)
+        - embedded-opentype
+        - truetype-att (Apple Advanced Typography)
+        - svg
+        */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-family: 'Love', 'Times New Roman', Times, serif;
+            font-size: 3em;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .eg {
+            /* VIROU SHORTHAND:
+            font-family: 'eg', 'Times New Roman', Times, serif;
+            font-size: 3em;
+            font-weight: normal;
+            font-style: normal;
+            */
+            font: normal normal 3em eg, 'Times New Roman', Times, Verdana, serif;
+        }
+
+        .circus {
+            font-family: 'circus', Verdana, serif;
+            src: url('fonts/LosChapters.otf'), format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="eg">Deus</h1>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, harum esse vitae sit nisi odit animi ullam officiis molestias laudantium molestiae quas asperiores similique qui! Hic alias atque unde veniam.</p>
+    <h1 class="eg">Título</h1>
+    <p class="eg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem illo quisquam porro aliquid suscipit quod maiores quidem a, alias ducimus nemo qui aliquam delectus eum ab ipsa nesciunt perspiciatis deleniti?</p>
+    <h1 class="circus"> Circo de Soled</h1>
+    <p class="circus">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci voluptate ullam facere quam veniam, obcaecati repellendus. Consectetur tempora architecto, aperiam commodi, quisquam, dolor repellat nostrum quidem perferendis mollitia ab cumque.</p>
+</body>
+</html>

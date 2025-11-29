@@ -1,0 +1,11 @@
+* {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to top, #C8C8C8, #9E9E9E, #838383, #636363);
+}
+
+h1 {
+    color: #F2E530;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/mind-black.ico" type="image/x-icon">
+    <title>Meus mentores</title>
+    <style>
+        /* Padrão de cor Padrão / Fallback */
+body {
+    background-color: #ffffff; /* Cor padrão: BRANCO para o modo claro */
+    color: #333333;           /* Cor padrão: Texto escuro */
+}
+
+/* 1. Adaptação para MODO ESCURO (Dark Mode) */
+@media (prefers-color-scheme: dark) {
+    body {
+        /* Inverte as cores para o tema escuro */
+        background-color: #121212; /* Cor de fundo ESCURA (ex: cinza quase preto) */
+        color: #f0f0f0;           /* Cor do texto CLARO */
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+/* 2. Adaptação opcional para MODO CLARO (Light Mode) */
+@media (prefers-color-scheme: light) {
+    /* Não é estritamente necessário se o padrão já for light, mas garante especificidade */
+    body {
+        background-color: #ffffff;
+        color: #333333;
+    }
+}
+    </style>
+</head>
+<body>
+    <h1>Estes são os meus mentores:</h1>
+    <a href="pag001/index.html"><video poster="imgs/thumb-hc.jpg" width="800px"></video></a>
+    <a href="pag002/index.html"><img src="imgs/thumb-fa.jpg" width="800px"></a>
+</body>
+</html>

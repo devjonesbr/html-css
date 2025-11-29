@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(24, 97, 126);
+    font-size: 2em;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(33, 136, 161);
+    font-size: 1.5em;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*
+
+font: 1 2 3 4 5
+1 style
+2 variant
+3 weight
+4 size/line-height
+5 family
+
+*/
