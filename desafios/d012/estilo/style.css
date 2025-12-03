@@ -25,17 +25,42 @@ header > p {
     padding-bottom: 50px;
 }
 
-a {
+header a, footer a {
     color: white;
     text-decoration: none;
     font-weight: bolder;
 }
 
-a:hover {
+header a:hover, footer a:hover {
     text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+
+}
+
+.normal {
+    background-color: white;
+    color: black;
+}
+
+.imagem {
+    background-color: rgb(99, 89, 89);
+    color: white;
+}
+
+.imagem > p {
+    background-color: rgba(0, 0, 0, 0.253);
+    width: 400px;
 }
 
 footer {
     background-color: black;
+    color: white;
     text-align: center;
+    padding: 10px;
 }
