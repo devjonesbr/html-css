@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        * {
+            line-height: 2em;
+        }
+    </style>
+</head>
+<body>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <div>
+            <label for="icor">Cor:</label>
+            <input type="color" name="cor" id="icor" value="#23815151">
+        </div>
+
+        <div>
+            <label for="inivel">Nível de satisfação:</label>
+            <input type="range" name="nivel" id="inivel" min="0" max="15" value="12">
+        </div>
+
+        <div>
+            <label for="ifoto">Foto</label>
+            <input type="file" name="Foto" id="ifoto">
+        </div>
+
+        <div>
+            <input type="reset" value="Clear">
+            <input type="submit" value="Send">
+        </div>
+    </form>
+</body>
+</html>
