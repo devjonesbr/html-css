@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!all</title>
+    <style>
+
+        legend {
+            font-size: 1.3em;
+        }
+        
+        p, div {
+            margin-bottom: 30px;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Todos os dados pessoais</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required placeholder="seu nome" size="20">
+            </p>
+
+            <p>
+                <label for="iemail">Email</label>
+                <input type="email" name="email" id="iemail" required placeholder="digite seu email" size="20" autocomplete="email">
+            </p>
+
+            <div>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required maxlength="13" placeholder="(xx)xxxx-xxxx" size="20" autocomplete="tel"> 
+            </div>
+
+            <p>
+                <label for="isen">Senha:</label>
+                <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="20" placeholder="mínimo 8 caracteres" autocomplete="current-password">
+            </p>
+            
+            <p>
+                <label for="imedia">Média:</label>
+                <input type="number" name="media" id="imedia" required min="0" max="10" step=".1" value="5" placeholder="0 a 10">
+            </p>
+
+            <p>
+                <label for="imes">Período letivo:</label>
+                <input type="month" name="mes" id="imes" value="2020-07" required>
+            </p>
+
+            <p>
+                <label for="idia">Dia da prova:</label>
+                <input type="date" name="dia" id="idia" value="2025-12-16">
+            </p>
+
+            <p>
+                <label for="ihora">Hora da Prova</label>
+                <input type="time" name="hora" id="ihora" required>
+            </p>
+
+            <div>
+                <input type="radio" name="sexo" id="imasc" value="M">
+                <label for="imasc">Masculino</label> <br>
+                <input type="radio" name="sexo" id="ifem" value="F" checked>
+                <label for="ifem">Feminino</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="esbas" id="iesbas" checked><label for="iesbas">Basquete </label><br>
+                <input type="checkbox" name="esfut" id="iesfut" checked> <label for="iesfut">Futebol</label> <br>
+                <input type="checkbox" name="esnat" id="iesnat"><label for="iesnat">Natação</label> <br>
+                <input type="checkbox" name="esten" id="iesten"><label for="iesten">Tênis</label> <br>
+            </div>
+            
+            <div>
+                <label for="icor">Cor:</label>
+                <input type="color" name="cor" id="icor" value="#23815151">
+            </div>
+
+            <div>
+                <label for="inivel">Nível de satisfação:</label>
+                <input type="range" name="nivel" id="inivel" min="0" max="15" value="12">
+            </div>
+
+            <div>
+                <label for="ifoto">Foto</label>
+                <input type="file" name="Foto" id="ifoto">
+            </div>
+
+            <div>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">
+
+                <option value="" selected>---ESCOLHA---</option>
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contabilista</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="imsg">Mensagem</label> <br>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Sua mensagem..."></textarea>
+        </p>
+
+         <p>
+            <label for="in1">Número 1:</label>
+            <input type="number" name="n1" id="in1" oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="in2">Número 2:</label>
+            <input type="number" name="n2" id="in2" oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+
+        <p>
+            <label for="isoma">Soma:</label>
+            <output name="soma" id="isoma">0</output>
+        </p>
+
+        <p>
+            <label for="inum">Número:</label>
+            <input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)">
+            <output id="ival">5</output>
+        </p>
+
+        <p>
+            <label for="iano">Em que ano você nasceu?</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2020" value="2000" oninput="calcIdade()">
+        </p>
+        <p>
+            <label for="iidade">Sua idade é:</label>
+            <output id="iidade">25</output>
+        </p>
+
+        <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(iano.value)
+        }
+        </script>
+
+        <p>
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
+        </p>
+        </fieldset>
+    </form>
+</body>
+</html>
